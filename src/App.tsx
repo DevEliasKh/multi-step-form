@@ -1,3 +1,4 @@
+import { Outlet, Link } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -6,67 +7,31 @@ function App() {
          <nav className="h-40">
             <ul className="flex justify-center items-center gap-4 h-full relative -top-8">
                <li className="inline">
-                  <button>1</button>
+                  <button>
+                     <Link to={`step1`}>1</Link>
+                  </button>
                </li>
                <li className="inline">
-                  <button>2</button>
+                  <button>
+                     <Link to={`step2`}>2</Link>
+                  </button>
                </li>
                <li className="inline">
-                  <button>3</button>
+                  <button>
+                     <Link to={`step3`}>3</Link>
+                  </button>
                </li>
                <li className="inline">
-                  <button>4</button>
+                  <button>
+                     <Link to={`step4`}>4</Link>
+                  </button>
                </li>
             </ul>
          </nav>
-         <main>
-            <form
-               action=""
-               className="relative -top-20 bg-white my-0 mx-auto w-9/12 rounded-md p-4"
-            >
-               <fieldset className="flex flex-col">
-                  <legend className="text-2xl font-bold text-berkeley_blue mt-7">
-                     Personal info
-                  </legend>
-                  <p className="py-4 text-cool_gray">
-                     Please provide your name, email address, and phone number
-                  </p>
-                  <label htmlFor="name">
-                     Name
-                     <input
-                        type="text"
-                        id="name"
-                        placeholder="e.g. Stephen King"
-                        required
-                     />
-                  </label>
-                  <label htmlFor="email">
-                     Email Address
-                     <input
-                        type="email"
-                        id="email"
-                        placeholder="e.g.stephenking@lorem.com"
-                     />
-                  </label>
-                  <label htmlFor="phone">
-                     Phone Number
-                     <input
-                        type="number"
-                        id="phone"
-                        placeholder="e.g. +1 234 567 890"
-                     />
-                  </label>
-               </fieldset>
-            </form>
-         </main>
-         <footer>
-            <div className="btn flex flex-row-reverse justify-between p-6">
-               <button id="back-btn" className="hidden">
-                  Go Back
-               </button>
-               <button id="next-btn">Next Step</button>
-            </div>
-         </footer>
+
+         <div>
+            <Outlet />
+         </div>
          {/* <p>
             Step 1 Your info Step 2 Select plan Step 3 Add-ons Step 4 Summary
             Personal info Please provide your name, email address, and phone
