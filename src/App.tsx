@@ -1,14 +1,72 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
-   const [count, setCount] = useState(0);
-
    return (
       <>
-         <p>
+         <nav className="h-40">
+            <ul className="flex justify-center items-center gap-4 h-full relative -top-8">
+               <li className="inline">
+                  <button>1</button>
+               </li>
+               <li className="inline">
+                  <button>2</button>
+               </li>
+               <li className="inline">
+                  <button>3</button>
+               </li>
+               <li className="inline">
+                  <button>4</button>
+               </li>
+            </ul>
+         </nav>
+         <main>
+            <form
+               action=""
+               className="bg-white w-9/12 my-0 mx-auto rounded-md p-4 relative -top-20"
+            >
+               <fieldset className="flex flex-col">
+                  <legend className="text-2xl font-bold text-berkeley_blue">
+                     Personal info
+                  </legend>
+                  <p className="py-4 text-cool_gray">
+                     Please provide your name, email address, and phone number
+                  </p>
+                  <label htmlFor="name">
+                     Name
+                     <input
+                        type="text"
+                        id="name"
+                        placeholder="e.g. Stephen King"
+                     />
+                  </label>
+                  <label htmlFor="email">
+                     Email Address
+                     <input
+                        type="email"
+                        id="email"
+                        placeholder="e.g.stephenking@lorem.com"
+                     />
+                  </label>
+                  <label htmlFor="phone">
+                     Phone Number
+                     <input
+                        type="number"
+                        id="phone"
+                        placeholder="e.g. +1 234 567 890"
+                     />
+                  </label>
+               </fieldset>
+            </form>
+         </main>
+         <footer>
+            <div className="btn flex flex-row-reverse justify-between p-6">
+               <button id="back-btn" className="hidden">
+                  Go Back
+               </button>
+               <button id="next-btn">Next Step</button>
+            </div>
+         </footer>
+         {/* <p>
             Step 1 Your info Step 2 Select plan Step 3 Add-ons Step 4 Summary
             Personal info Please provide your name, email address, and phone
             number. Name e.g. Stephen King Email Address e.g.
@@ -23,7 +81,7 @@ function App() {
             Back Confirm Thank you! Thanks for confirming your subscription! We
             hope you have fun using our platform. If you ever need support,
             please feel free to email us at support@loremgaming.com.
-         </p>
+         </p> */}
       </>
    );
 }
