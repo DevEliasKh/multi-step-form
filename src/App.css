@@ -37,6 +37,12 @@ fieldset input {
    padding: 0.5rem;
    margin-bottom: 1rem;
 }
+
+fieldset input:active,
+fieldset input:focus-visible {
+   border: 1px solid hsl(213, 96%, 18%);
+   outline: none;
+}
 #next-btn {
    background-color: hsl(213, 96%, 18%);
    color: white;

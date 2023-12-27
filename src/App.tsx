@@ -22,10 +22,10 @@ function App() {
          <main>
             <form
                action=""
-               className="bg-white w-9/12 my-0 mx-auto rounded-md p-4 relative -top-20"
+               className="relative -top-20 bg-white my-0 mx-auto w-9/12 rounded-md p-4"
             >
                <fieldset className="flex flex-col">
-                  <legend className="text-2xl font-bold text-berkeley_blue">
+                  <legend className="text-2xl font-bold text-berkeley_blue mt-7">
                      Personal info
                   </legend>
                   <p className="py-4 text-cool_gray">
@@ -37,6 +37,7 @@ function App() {
                         type="text"
                         id="name"
                         placeholder="e.g. Stephen King"
+                        required
                      />
                   </label>
                   <label htmlFor="email">
