@@ -1,7 +1,13 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import "./App.css";
 
 function App() {
+   const navigate = useNavigate();
+   if (window.location.pathname == "/") {
+      setTimeout(() => {
+         return navigate("/step1");
+      }, 0);
+   }
    return (
       <>
          <nav className="h-40">
@@ -28,7 +34,6 @@ function App() {
                </li>
             </ul>
          </nav>
-
          <div>
             <Outlet />
          </div>

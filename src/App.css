@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 :root {
+   box-sizing: border-box;
    font-family: "Ubuntu", sans-serif;
 }
 main {

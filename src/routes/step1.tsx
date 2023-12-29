@@ -42,7 +42,7 @@ function Step1() {
             </form>
          </main>
          <footer>
-            <div className="btn flex flex-row-reverse justify-between p-6">
+            <div className="btn w-full flex flex-row-reverse justify-between p-6">
                <button id="back-btn" className="hidden">
                   Go Back
                </button>
