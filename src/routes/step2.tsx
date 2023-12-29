@@ -1,3 +1,4 @@
+import Toggle from "../component/toggle";
 function Step2() {
    return (
       <>
@@ -13,31 +14,26 @@ function Step2() {
                   <p className="py-4 text-cool_gray">
                      You have the option of monthly or yearly billing.
                   </p>
-                  <label htmlFor="name">
-                     Name
-                     <input
-                        type="text"
-                        id="name"
-                        placeholder="e.g. Stephen King"
-                        required
+                  <div className="selected border border-black mb-1">
+                     <img
+                        src="src/assets/images/icon-arcade.svg"
+                        alt=""
+                        className="w-8 inline"
                      />
-                  </label>
-                  <label htmlFor="email">
-                     Email Address
-                     <input
-                        type="email"
-                        id="email"
-                        placeholder="e.g.stephenking@lorem.com"
-                     />
-                  </label>
-                  <label htmlFor="phone">
-                     Phone Number
-                     <input
-                        type="number"
-                        id="phone"
-                        placeholder="e.g. +1 234 567 890"
-                     />
-                  </label>
+                     <div className="inline">
+                        Arcade
+                        <span>$9/mon</span>
+                     </div>
+                  </div>
+                  <div className="selected border border-black mb-1">
+                     Advance
+                  </div>
+                  <div className="selected border border-black mb-1">Pro</div>
+                  <div className="flex justify-center gap-3 bg-ghost_white p-3">
+                     <div className="text-sm">Monthly</div>
+                     <Toggle />
+                     <div className="text-sm">Yearly</div>
+                  </div>
                </fieldset>
             </form>
          </main>

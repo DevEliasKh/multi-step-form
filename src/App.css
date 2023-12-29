@@ -54,3 +54,7 @@ fieldset input:focus-visible {
 #back-btn {
    color: hsl(231, 11%, 63%);
 }
+
+.selected:hover {
+   border: 1px solid gray;
+}
