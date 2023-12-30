@@ -1,4 +1,5 @@
 import { Outlet, Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -8,6 +9,13 @@ function App() {
       setTimeout(() => {
          return navigate("/step1");
       }, 0);
+   }
+   const [toggleState, setToggleState] = useState("month");
+   function handleClick() {
+      if (toggleState == "month") {
+         return setToggleState("year");
+      }
+      return setToggleState("month");
    }
 
    return (
@@ -37,7 +45,7 @@ function App() {
             </ul>
          </nav>
          <div>
-            <Outlet />
+            <Outlet context={[toggleState, handleClick]} />
          </div>
          {/* <p>
             Step 1 Your info Step 2 Select plan Step 3 Add-ons Step 4 Summary

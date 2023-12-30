@@ -1,13 +1,8 @@
 import Toggle from "../component/toggle";
-import { useState } from "react";
+import { useOutletContext } from "react-router-dom";
 function Step2() {
-   const [toggleState, setToggleState] = useState("month");
-   function handleClick() {
-      if (toggleState == "month") {
-         return setToggleState("year");
-      }
-      return setToggleState("month");
-   }
+   const [toggleState, handleClick] = useOutletContext();
+
    return (
       <>
          <main>
