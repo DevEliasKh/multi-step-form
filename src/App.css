@@ -23,7 +23,7 @@ li button {
    font-weight: 700;
 }
 
-li button:active {
+.active {
    background-color: hsl(206, 94%, 87%);
    color: rgba(0, 0, 0, 0.5);
 }

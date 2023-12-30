@@ -3,32 +3,34 @@ import "./App.css";
 
 function App() {
    const navigate = useNavigate();
-   if (window.location.pathname == "/") {
+   const pathname = window.location.pathname;
+   if (pathname == "/") {
       setTimeout(() => {
          return navigate("/step1");
       }, 0);
    }
+
    return (
       <>
          <nav className="h-40">
             <ul className="flex justify-center items-center gap-4 h-full relative -top-8">
                <li className="inline">
-                  <button>
+                  <button className={pathname[5] == "1" ? "active" : ""}>
                      <Link to={`step1`}>1</Link>
                   </button>
                </li>
                <li className="inline">
-                  <button>
+                  <button className={pathname[5] == "2" ? "active" : ""}>
                      <Link to={`step2`}>2</Link>
                   </button>
                </li>
                <li className="inline">
-                  <button>
+                  <button className={pathname[5] == "3" ? "active" : ""}>
                      <Link to={`step3`}>3</Link>
                   </button>
                </li>
                <li className="inline">
-                  <button>
+                  <button className={pathname[5] == "4" ? "active" : ""}>
                      <Link to={`step4`}>4</Link>
                   </button>
                </li>
