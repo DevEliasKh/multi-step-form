@@ -59,3 +59,8 @@ fieldset input:focus-visible {
    border: 1px solid #02295a;
    background-color: rgba(71, 61, 255, 0.05);
 }
+
+div:has(> .check:checked) {
+   border: 1px solid #02295a;
+   background-color: rgba(71, 61, 255, 0.05);
+}
