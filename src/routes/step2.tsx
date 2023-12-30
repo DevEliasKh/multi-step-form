@@ -1,5 +1,13 @@
 import Toggle from "../component/toggle";
+import { useState } from "react";
 function Step2() {
+   const [toggleState, setToggleState] = useState("month");
+   function handleClick() {
+      if (toggleState == "month") {
+         return setToggleState("year");
+      }
+      return setToggleState("month");
+   }
    return (
       <>
          <main>
@@ -14,24 +22,79 @@ function Step2() {
                   <p className="py-4 text-cool_gray">
                      You have the option of monthly or yearly billing.
                   </p>
-                  <div className="selected border border-black mb-1">
+                  <div className="selected flex border border-cool_gray rounded mb-1 p-4">
                      <img
                         src="src/assets/images/icon-arcade.svg"
                         alt=""
                         className="w-8 inline"
                      />
-                     <div className="inline">
-                        Arcade
-                        <span>$9/mon</span>
+                     <div className="flex flex-col pl-4">
+                        <div className="text-sm font-bold text-berkeley_blue">
+                           Arcade
+                        </div>
+                        <span className="text-cool_gray text-xs">
+                           {toggleState == "month" ? "$9/mo" : "$90/yr"}
+                        </span>
+                        <span
+                           className={`text-xs text-berkeley_blue ${
+                              toggleState == "month" ? "hidden" : ""
+                           }`}
+                        >
+                           2 months free
+                        </span>
                      </div>
                   </div>
-                  <div className="selected border border-black mb-1">
-                     Advance
+                  <div className="selected flex border border-cool_gray rounded mb-1 p-4">
+                     <img
+                        src="src/assets/images/icon-advanced.svg"
+                        alt=""
+                        className="w-8 inline"
+                     />
+                     <div className="flex flex-col pl-4">
+                        <div className="text-sm font-bold text-berkeley_blue">
+                           Advanced
+                        </div>
+                        <span className="text-cool_gray text-xs">
+                           {toggleState == "month" ? "$12/mo" : "$120/yr"}
+                        </span>
+                        <span
+                           className={`text-xs text-berkeley_blue ${
+                              toggleState == "month" ? "hidden" : ""
+                           }`}
+                        >
+                           2 months free
+                        </span>
+                     </div>
                   </div>
-                  <div className="selected border border-black mb-1">Pro</div>
+                  <div className="selected flex border border-cool_gray rounded mb-1 p-4">
+                     <img
+                        src="src/assets/images/icon-pro.svg"
+                        alt=""
+                        className="w-8 inline"
+                     />
+                     <div className="flex flex-col pl-4">
+                        <div className="text-sm font-bold text-berkeley_blue">
+                           Pro
+                        </div>
+                        <span className="text-cool_gray text-xs">
+                           {toggleState == "month" ? "$15/mo" : "$150/yr"}
+                        </span>
+                        <span
+                           className={`text-xs text-berkeley_blue ${
+                              toggleState == "month" ? "hidden" : ""
+                           }`}
+                        >
+                           2 months free
+                        </span>
+                     </div>
+                  </div>
+
                   <div className="flex justify-center gap-3 bg-ghost_white p-3">
                      <div className="text-sm">Monthly</div>
-                     <Toggle />
+                     <Toggle
+                        toggleState={toggleState}
+                        handleClick={handleClick}
+                     />
                      <div className="text-sm">Yearly</div>
                   </div>
                </fieldset>
