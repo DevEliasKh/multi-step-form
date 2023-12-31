@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { useOutletContext, Link } from "react-router-dom";
 
 function Step3() {
-  const [toggleState, handleClick] = useOutletContext();
+  const [toggleState, handleClick, service, setService] = useOutletContext();
   const pathname = window.location.pathname;
 
   return (
@@ -26,6 +27,16 @@ function Step3() {
                 type="checkbox"
                 id="online-service"
                 className="check w-6 h-6 m-0"
+                checked={service.add_ons.online_service}
+                onChange={() => {
+                  setService({
+                    ...service,
+                    add_ons: {
+                      ...service.add_ons,
+                      online_service: !service.add_ons.online_service,
+                    },
+                  });
+                }}
               />
               <div className="flex flex-col">
                 <span className="font-bold text-berkeley_blue">
@@ -47,6 +58,16 @@ function Step3() {
                 type="checkbox"
                 id="storage"
                 className="check w-6 h-6 m-0"
+                checked={service.add_ons.Large_storage}
+                onChange={() => {
+                  setService({
+                    ...service,
+                    add_ons: {
+                      ...service.add_ons,
+                      Large_storage: !service.add_ons.Large_storage,
+                    },
+                  });
+                }}
               />
               <div className="flex flex-col">
                 <span className="font-bold text-berkeley_blue mr-8">
@@ -68,6 +89,17 @@ function Step3() {
                 type="checkbox"
                 id="profile"
                 className="check w-6 h-6 m-0"
+                checked={service.add_ons.customizable_profile}
+                onChange={() => {
+                  setService({
+                    ...service,
+                    add_ons: {
+                      ...service.add_ons,
+                      customizable_profile:
+                        !service.add_ons.customizable_profile,
+                    },
+                  });
+                }}
               />
               <div className="flex flex-col">
                 <span className="font-bold text-berkeley_blue">
@@ -92,7 +124,12 @@ function Step3() {
             </button>
           </Link>
           <Link to={`/step${+pathname[5] + 1}`}>
-            <button id="next-btn">Next Step</button>
+            <button
+              id="next-btn"
+              onClick={() => setService({ ...service, add_ons: add_ons })}
+            >
+              Next Step
+            </button>
           </Link>
         </div>
       </footer>

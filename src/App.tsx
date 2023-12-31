@@ -10,9 +10,6 @@ function App() {
       return navigate("/step1");
     }, 0);
   }
-
-  const [service, setService] = useState({ service: "arcade", adds_on: [] });
-
   const [toggleState, setToggleState] = useState("month");
   function handleClick() {
     if (toggleState == "month") {
@@ -20,6 +17,17 @@ function App() {
     }
     return setToggleState("month");
   }
+
+  const [service, setService] = useState({
+    plan: "arcade",
+    time: toggleState,
+    add_ons: {
+      online_service: false,
+      Large_storage: false,
+      customizable_profile: false,
+    },
+  });
+  console.log(service);
 
   return (
     <>

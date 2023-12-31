@@ -2,10 +2,10 @@ import { useState } from "react";
 import Toggle from "../component/toggle";
 import { useOutletContext, Link } from "react-router-dom";
 function Step2() {
-  const [toggleState, handleClick] = useOutletContext();
+  const [toggleState, handleClick, service, setService] = useOutletContext();
   const pathname = window.location.pathname;
 
-  const [plan, setPlan] = useState("arcade");
+  const [plan, setPlan] = useState(service.plan);
 
   return (
     <>
@@ -135,7 +135,14 @@ function Step2() {
             </button>
           </Link>
           <Link to={`/step${+pathname[5] + 1}`}>
-            <button id="next-btn">Next Step</button>
+            <button
+              id="next-btn"
+              onClick={() =>
+                setService({ ...service, plan: plan, time: toggleState })
+              }
+            >
+              Next Step
+            </button>
           </Link>
         </div>
       </footer>
