@@ -124,12 +124,7 @@ function Step3() {
             </button>
           </Link>
           <Link to={`/step${+pathname[5] + 1}`}>
-            <button
-              id="next-btn"
-              onClick={() => setService({ ...service, add_ons: add_ons })}
-            >
-              Next Step
-            </button>
+            <button id="next-btn">Next Step</button>
           </Link>
         </div>
       </footer>
