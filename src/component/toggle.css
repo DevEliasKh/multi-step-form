@@ -1,21 +1,21 @@
 .main {
-   width: 2.5rem;
-   background-color: #02295a;
-   border-radius: 1rem;
-   display: flex;
-   padding: 0.25rem;
+  width: 2.5rem;
+  background-color: #02295a;
+  border-radius: 1rem;
+  display: flex;
+  padding: 0.25rem;
 }
 
 .circle {
-   width: 0.75rem;
-   border-radius: 1rem;
-   background-color: #fff;
+  width: 0.75rem;
+  border-radius: 1rem;
+  background-color: #fff;
 }
 
 .main-year {
-   justify-content: end;
+  justify-content: end;
 }
 
 .main-month {
-   justify-content: start;
+  justify-content: start;
 }

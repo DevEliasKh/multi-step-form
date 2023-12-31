@@ -3,51 +3,54 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-   const navigate = useNavigate();
-   const pathname = window.location.pathname;
-   if (pathname == "/") {
-      setTimeout(() => {
-         return navigate("/step1");
-      }, 0);
-   }
-   const [toggleState, setToggleState] = useState("month");
-   function handleClick() {
-      if (toggleState == "month") {
-         return setToggleState("year");
-      }
-      return setToggleState("month");
-   }
+  const navigate = useNavigate();
+  const pathname = window.location.pathname;
+  if (pathname == "/") {
+    setTimeout(() => {
+      return navigate("/step1");
+    }, 0);
+  }
 
-   return (
-      <>
-         <nav className="h-40">
-            <ul className="flex justify-center items-center gap-4 h-full relative -top-8">
-               <li className="inline">
-                  <button className={pathname[5] == "1" ? "active" : ""}>
-                     <Link to={`step1`}>1</Link>
-                  </button>
-               </li>
-               <li className="inline">
-                  <button className={pathname[5] == "2" ? "active" : ""}>
-                     <Link to={`step2`}>2</Link>
-                  </button>
-               </li>
-               <li className="inline">
-                  <button className={pathname[5] == "3" ? "active" : ""}>
-                     <Link to={`step3`}>3</Link>
-                  </button>
-               </li>
-               <li className="inline">
-                  <button className={pathname[5] == "4" ? "active" : ""}>
-                     <Link to={`step4`}>4</Link>
-                  </button>
-               </li>
-            </ul>
-         </nav>
-         <div>
-            <Outlet context={[toggleState, handleClick]} />
-         </div>
-         {/* <p>
+  const [service, setService] = useState({ service: "arcade", adds_on: [] });
+
+  const [toggleState, setToggleState] = useState("month");
+  function handleClick() {
+    if (toggleState == "month") {
+      return setToggleState("year");
+    }
+    return setToggleState("month");
+  }
+
+  return (
+    <>
+      <nav className="h-40">
+        <ul className="flex justify-center items-center gap-4 h-full relative -top-8">
+          <Link to={`step1`}>
+            <li className="inline">
+              <button className={pathname[5] == "1" ? "active" : ""}>1</button>
+            </li>
+          </Link>
+          <Link to={`step2`}>
+            <li className="inline">
+              <button className={pathname[5] == "2" ? "active" : ""}>2</button>
+            </li>
+          </Link>
+          <Link to={`step3`}>
+            <li className="inline">
+              <button className={pathname[5] == "3" ? "active" : ""}>3</button>
+            </li>
+          </Link>
+          <Link to={`step4`}>
+            <li className="inline">
+              <button className={pathname[5] == "4" ? "active" : ""}>4</button>
+            </li>
+          </Link>
+        </ul>
+      </nav>
+      <div>
+        <Outlet context={[toggleState, handleClick, service, setService]} />
+      </div>
+      {/* <p>
             Step 1 Your info Step 2 Select plan Step 3 Add-ons Step 4 Summary
             Personal info Please provide your name, email address, and phone
             number. Name e.g. Stephen King Email Address e.g.
@@ -63,8 +66,8 @@ function App() {
             hope you have fun using our platform. If you ever need support,
             please feel free to email us at support@loremgaming.com.
          </p> */}
-      </>
-   );
+    </>
+  );
 }
 
 export default App;

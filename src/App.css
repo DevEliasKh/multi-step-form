@@ -2,65 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-   box-sizing: border-box;
-   font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
 }
 main {
-   background-color: hsl(216, 100%, 97%);
+  background-color: hsl(216, 100%, 97%);
 }
 nav {
-   background-image: url(./assets/images/bg-sidebar-mobile.svg);
+  background-image: url(./assets/images/bg-sidebar-mobile.svg);
 }
 
 li button {
-   border: 1px solid white;
-   height: 2.5rem;
-   aspect-ratio: 1/1;
-   border-radius: 50%;
-   padding: 0.5rem;
-   background-color: transparent;
-   color: white;
-   font-weight: 700;
+  border: 1px solid white;
+  height: 2.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  padding: 0.5rem;
+  background-color: transparent;
+  color: white;
+  font-weight: 700;
 }
 
 .active {
-   background-color: hsl(206, 94%, 87%);
-   color: rgba(0, 0, 0, 0.5);
+  background-color: hsl(206, 94%, 87%);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 fieldset label {
-   color: #02295a;
+  color: #02295a;
 }
 
 fieldset input {
-   border: 1px solid hsl(231, 11%, 63%);
-   border-radius: 0.25rem;
-   padding: 0.5rem;
-   margin-bottom: 1rem;
+  border: 1px solid hsl(231, 11%, 63%);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 fieldset input:active,
 fieldset input:focus-visible {
-   border: 1px solid hsl(213, 96%, 18%);
-   outline: none;
+  border: 1px solid hsl(213, 96%, 18%);
+  outline: none;
 }
 #next-btn {
-   background-color: hsl(213, 96%, 18%);
-   color: white;
-   padding: 0.75rem;
-   border-radius: 5%;
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  padding: 0.75rem;
+  border-radius: 5%;
 }
 
 #back-btn {
-   color: hsl(231, 11%, 63%);
+  color: hsl(231, 11%, 63%);
 }
 
-.selected:hover {
-   border: 1px solid #02295a;
-   background-color: rgba(71, 61, 255, 0.05);
+.selected {
+  border: 1px solid #02295a;
+  background-color: rgba(71, 61, 255, 0.05);
 }
 
-div:has(> .check:checked) {
-   border: 1px solid #02295a;
-   background-color: rgba(71, 61, 255, 0.05);
+label:has(> .check:checked) {
+  border: 2px solid #02295a;
+  background-color: rgba(71, 61, 255, 0.1);
 }
