@@ -1,7 +1,8 @@
 import Toggle from "../component/toggle";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, Link } from "react-router-dom";
 function Step2() {
    const [toggleState, handleClick] = useOutletContext();
+   const pathname = window.location.pathname;
 
    return (
       <>
@@ -97,10 +98,14 @@ function Step2() {
          </main>
          <footer>
             <div className="btn w-full flex flex-row justify-between p-6">
-               <button id="back-btn" className="">
-                  Go Back
-               </button>
-               <button id="next-btn">Next Step</button>
+               <Link to={`/step${+pathname[5] - 1}`}>
+                  <button id="back-btn" className="">
+                     Go Back
+                  </button>
+               </Link>
+               <Link to={`/step${+pathname[5] + 1}`}>
+                  <button id="next-btn">Next Step</button>
+               </Link>
             </div>
          </footer>
       </>

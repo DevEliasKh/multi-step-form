@@ -1,4 +1,8 @@
+import { Link } from "react-router-dom";
+
 function Step1() {
+   const pathname = window.location.pathname;
+
    return (
       <>
          <main>
@@ -40,7 +44,9 @@ function Step1() {
                <button id="back-btn" className="hidden">
                   Go Back
                </button>
-               <button id="next-btn">Next Step</button>
+               <Link to={`/step${+pathname[5] + 1}`}>
+                  <button id="next-btn">Next Step</button>
+               </Link>
             </div>
          </footer>
       </>
