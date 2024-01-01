@@ -27,7 +27,6 @@ function App() {
       customizable_profile: false,
     },
   });
-  console.log(service);
 
   return (
     <>
