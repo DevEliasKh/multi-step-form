@@ -28,8 +28,8 @@ function Step4() {
   }
 
   return (
-    <>
-      <main className="relative -top-20 bg-white my-0 mx-auto w-11/12 rounded-md p-4">
+    <main>
+      <div className="relative -top-20 bg-white my-0 mx-auto w-11/12 rounded-md p-4">
         <section className="flex flex-col">
           <div className="text-2xl font-bold text-berkeley_blue mt-7">
             Finishing up
@@ -83,7 +83,7 @@ function Step4() {
             </div>
           </section>
         </section>
-      </main>
+      </div>
       <footer>
         <div className="btn w-full flex flex-row justify-between p-6">
           <Link to={`/step${+pathname[5] - 1}`}>
@@ -96,7 +96,7 @@ function Step4() {
           </Link>
         </div>
       </footer>
-    </>
+    </main>
   );
 }
 

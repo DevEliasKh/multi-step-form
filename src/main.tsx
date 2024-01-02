@@ -5,6 +5,7 @@ import Step1 from "./routes/step1";
 import Step3 from "./routes/step3.tsx";
 import Step4 from "./routes/step4.tsx";
 import Step2 from "./routes/step2.tsx";
+import Step5 from "./routes/step5.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "step4",
         element: <Step4 />,
+      },
+      {
+        path: "step5",
+        element: <Step5 />,
       },
     ],
   },
