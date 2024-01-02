@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {},
     screens: {
-      mobile: "375px",
-      desktop: "1440",
+      // mobile: "375px",
+      desktop: "375px",
     },
     colors: {
       // Configure your color palette here

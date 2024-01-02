@@ -8,7 +8,7 @@ function Step1() {
       <main>
         <form
           action=""
-          className="relative -top-20 bg-white my-0 mx-auto w-11/12 rounded-md p-4"
+          className="relative -top-20 bg-white my-0 mx-auto w-11/12 rounded-md p-4 desktop:static"
         >
           <fieldset className="flex flex-col">
             <legend className="text-2xl font-bold text-berkeley_blue mt-7">
