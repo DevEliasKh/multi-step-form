@@ -1,4 +1,4 @@
-import { keys } from "localforage";
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useOutletContext, Link } from "react-router-dom";
 
 function Step4() {

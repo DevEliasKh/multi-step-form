@@ -1,7 +1,7 @@
-import { useState } from "react";
 import { useOutletContext, Link } from "react-router-dom";
 
 function Step3() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [toggleState, handleClick, service, setService] = useOutletContext();
   const pathname = window.location.pathname;
 
