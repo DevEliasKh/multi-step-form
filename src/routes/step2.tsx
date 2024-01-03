@@ -36,7 +36,7 @@ function Step2() {
                 onChange={() => setPlan("arcade")}
               />
               <img
-                src="./assets/images/icon-arcade.svg"
+                src="/src/assets/images/icon-arcade.svg"
                 alt=""
                 className="w-8 inline"
               />
@@ -69,7 +69,7 @@ function Step2() {
                 onChange={() => setPlan("advanced")}
               />
               <img
-                src="./assets/images/icon-advanced.svg"
+                src="/src/assets/images/icon-advanced.svg"
                 alt=""
                 className="w-8 inline"
               />
@@ -102,7 +102,7 @@ function Step2() {
                 onChange={() => setPlan("pro")}
               />
               <img
-                src="./assets/images/icon-pro.svg"
+                src="/src/assets/images/icon-pro.svg"
                 alt=""
                 className="w-8 inline"
               />

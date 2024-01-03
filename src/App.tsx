@@ -30,8 +30,8 @@ function App() {
   });
 
   return (
-    <div className="flex flex-col desktop:flex-row w-screen desktop:items-stretch">
-      <nav className="h-40 desktop:h-auto ">
+    <div className="flex flex-col desktop:flex-row w-full">
+      <nav className="h-40 desktop:h-full desktop:w-1/4">
         <ul className="flex  justify-center items-center gap-4 h-full relative -top-8 desktop:flex-col desktop:items-start desktop:p-8 desktop:justify-start desktop:static ">
           <Link to={`step1`}>
             <li className="inline desktop:flex">
@@ -73,7 +73,7 @@ function App() {
           </Link>
         </ul>
       </nav>
-      <div>
+      <div className="content w-3/4 flex flex-col justify-center p-10">
         <Outlet
           context={
             {
