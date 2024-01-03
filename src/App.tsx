@@ -73,7 +73,7 @@ function App() {
           </Link>
         </ul>
       </nav>
-      <div className="content w-3/4 flex flex-col justify-center p-10">
+      <div className="content desktop:w-3/4 flex flex-col justify-center p-">
         <Outlet
           context={
             {

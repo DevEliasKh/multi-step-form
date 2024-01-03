@@ -75,7 +75,8 @@ label:has(> .check:checked) {
     background-image: url(./assets/images/bg-sidebar-desktop.svg);
 
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    border-radius: 1rem;
   }
   main {
     background-color: transparent;

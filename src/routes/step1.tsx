@@ -5,10 +5,10 @@ function Step1() {
 
   return (
     <>
-      <main>
+      <main className="">
         <form
           action=""
-          className="relative -top-20 bg-white my-0 mx-auto w-11/12 rounded-md p-4 desktop:static desktop:w-auto desktop:p-6"
+          className="relative -top-20 bg-white my-0 mx-auto w-11/12 rounded-md p-4 desktop:static desktop:w-9/12 desktop:p-6"
         >
           <fieldset className="flex flex-col">
             <legend className="text-2xl font-bold text-berkeley_blue mt-7">
@@ -35,8 +35,8 @@ function Step1() {
           </fieldset>
         </form>
       </main>
-      <footer>
-        <div className="btn w-full flex flex-row-reverse justify-between p-6">
+      <footer className="flex justify-center">
+        <div className="btn w-full flex flex-row-reverse justify-between p-6 desktop:w-9/12">
           <button id="back-btn" className="hidden">
             Go Back
           </button>

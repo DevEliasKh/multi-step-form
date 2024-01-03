@@ -14,114 +14,118 @@ function Step2() {
       <main>
         <form
           action=""
-          className="relative -top-20 bg-white my-0 mx-auto w-11/12 rounded-md p-4"
+          className="relative -top-20 bg-white my-0 mx-auto w-11/12 rounded-md p-4 desktop:static desktop:w-9/12 desktop:p-6"
         >
-          <fieldset className="flex flex-col">
-            <legend className="text-2xl font-bold text-berkeley_blue mt-7">
+          <fieldset className="flex flex-col desktop:justify-center">
+            <legend className="text-2xl font-bold text-berkeley_blue mt-7 ">
               Select your plan
             </legend>
-            <p className="py-4 text-cool_gray">
+            <p className="py-4 text-cool_gray desktop:col-end-4 desktop:col-start-1">
               You have the option of monthly or yearly billing.
             </p>
-            <label
-              htmlFor="arcade"
-              className="selected flex border border-cool_gray rounded mb-1 p-4"
-            >
-              <input
-                type="checkbox"
-                name="arcade"
-                id="arcade"
-                className="check hidden"
-                checked={plan === "arcade"}
-                onChange={() => setPlan("arcade")}
-              />
-              <img
-                src="/src/assets/images/icon-arcade.svg"
-                alt=""
-                className="w-8 inline"
-              />
-              <div className="flex flex-col pl-4">
-                <div className="text-sm font-bold text-berkeley_blue">
-                  Arcade
+            <div className="desktop:flex desktop:justify-center desktop:gap-8">
+              <label
+                htmlFor="arcade"
+                className="selected flex border border-cool_gray rounded mb-1 p-4 desktop:flex-col desktop:pr-12"
+              >
+                <input
+                  type="checkbox"
+                  name="arcade"
+                  id="arcade"
+                  className="check hidden"
+                  checked={plan === "arcade"}
+                  onChange={() => setPlan("arcade")}
+                />
+                <img
+                  src="/src/assets/images/icon-arcade.svg"
+                  alt=""
+                  className="w-8 inline"
+                />
+                <div className="flex flex-col pl-4 desktop:pt-6 desktop:pl-1">
+                  <div className="text-sm font-bold text-berkeley_blue">
+                    Arcade
+                  </div>
+                  <span className="text-cool_gray text-xs">
+                    {toggleState == "month" ? "$9/mo" : "$90/yr"}
+                  </span>
+                  <span
+                    className={`text-xs text-berkeley_blue ${
+                      toggleState == "month" ? "hidden" : ""
+                    }`}
+                  >
+                    2 months free
+                  </span>
                 </div>
-                <span className="text-cool_gray text-xs">
-                  {toggleState == "month" ? "$9/mo" : "$90/yr"}
-                </span>
-                <span
-                  className={`text-xs text-berkeley_blue ${
-                    toggleState == "month" ? "hidden" : ""
-                  }`}
-                >
-                  2 months free
-                </span>
-              </div>
-            </label>
-            <label
-              htmlFor="advanced"
-              className="selected flex border border-cool_gray rounded mb-1 p-4"
-            >
-              <input
-                type="checkbox"
-                name="advanced"
-                id="advanced"
-                className="check hidden"
-                checked={plan === "advanced"}
-                onChange={() => setPlan("advanced")}
-              />
-              <img
-                src="/src/assets/images/icon-advanced.svg"
-                alt=""
-                className="w-8 inline"
-              />
-              <div className="flex flex-col pl-4">
-                <div className="text-sm font-bold text-berkeley_blue">
-                  Advanced
+              </label>
+              <label
+                htmlFor="advanced"
+                className="selected flex border border-cool_gray rounded mb-1 p-4 desktop:flex-col desktop:pr-12"
+              >
+                <input
+                  type="checkbox"
+                  name="advanced"
+                  id="advanced"
+                  className="check hidden"
+                  checked={plan === "advanced"}
+                  onChange={() => setPlan("advanced")}
+                />
+                <img
+                  src="/src/assets/images/icon-advanced.svg"
+                  alt=""
+                  className="w-8 inline"
+                />
+                <div className="flex flex-col pl-4 desktop:pt-6 desktop:pl-1">
+                  <div className="text-sm font-bold text-berkeley_blue">
+                    Advanced
+                  </div>
+                  <span className="text-cool_gray text-xs">
+                    {toggleState == "month" ? "$12/mo" : "$120/yr"}
+                  </span>
+                  <span
+                    className={`text-xs text-berkeley_blue ${
+                      toggleState == "month" ? "hidden" : ""
+                    }`}
+                  >
+                    2 months free
+                  </span>
                 </div>
-                <span className="text-cool_gray text-xs">
-                  {toggleState == "month" ? "$12/mo" : "$120/yr"}
-                </span>
-                <span
-                  className={`text-xs text-berkeley_blue ${
-                    toggleState == "month" ? "hidden" : ""
-                  }`}
-                >
-                  2 months free
-                </span>
-              </div>
-            </label>
-            <label
-              htmlFor="pro"
-              className="selected flex border border-cool_gray rounded mb-1 p-4"
-            >
-              <input
-                type="checkbox"
-                name="pro"
-                id="pro"
-                className="check hidden"
-                checked={plan === "pro"}
-                onChange={() => setPlan("pro")}
-              />
-              <img
-                src="/src/assets/images/icon-pro.svg"
-                alt=""
-                className="w-8 inline"
-              />
-              <div className="flex flex-col pl-4">
-                <div className="text-sm font-bold text-berkeley_blue">Pro</div>
-                <span className="text-cool_gray text-xs">
-                  {toggleState == "month" ? "$15/mo" : "$150/yr"}
-                </span>
-                <span
-                  className={`text-xs text-berkeley_blue ${
-                    toggleState == "month" ? "hidden" : ""
-                  }`}
-                >
-                  2 months free
-                </span>
-              </div>
-            </label>
+              </label>
+              <label
+                htmlFor="pro"
+                className="selected flex border border-cool_gray rounded mb-1 p-4 desktop:flex-col desktop:pr-12"
+              >
+                <input
+                  type="checkbox"
+                  name="pro"
+                  id="pro"
+                  className="check hidden"
+                  checked={plan === "pro"}
+                  onChange={() => setPlan("pro")}
+                />
+                <img
+                  src="/src/assets/images/icon-pro.svg"
+                  alt=""
+                  className="w-8 inline"
+                />
+                <div className="flex flex-col pl-4 desktop:pt-6 desktop:pl-1">
+                  <div className="text-sm font-bold text-berkeley_blue">
+                    Pro
+                  </div>
+                  <span className="text-cool_gray text-xs">
+                    {toggleState == "month" ? "$15/mo" : "$150/yr"}
+                  </span>
+                  <span
+                    className={`text-xs text-berkeley_blue ${
+                      toggleState == "month" ? "hidden" : ""
+                    }`}
+                  >
+                    2 months free
+                  </span>
+                </div>
+              </label>
+            </div>
 
-            <div className="flex justify-center gap-3 bg-ghost_white p-3">
+            <div className="flex justify-center gap-3 bg-ghost_white p-3 desktop:h-min">
               <div className="text-sm">Monthly</div>
               <Toggle toggleState={toggleState} handleClick={handleClick} />
               <div className="text-sm">Yearly</div>
@@ -129,8 +133,8 @@ function Step2() {
           </fieldset>
         </form>
       </main>
-      <footer>
-        <div className="btn w-full flex flex-row justify-between p-6">
+      <footer className="flex justify-center">
+        <div className="btn w-full flex flex-row justify-between p-6 desktop:w-9/12">
           <Link to={`/step${+pathname[5] - 1}`}>
             <button id="back-btn" className="">
               Go Back
