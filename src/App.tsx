@@ -1,6 +1,7 @@
 import { Outlet, Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./App.css";
+import { AppContext, AppService } from "./libs/lib";
 
 function App() {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ function App() {
     return setToggleState("month");
   }
 
-  const [service, setService] = useState({
+  const [service, setService] = useState<AppService>({
     plan: "arcade",
     time: toggleState,
     add_ons: {
@@ -73,7 +74,16 @@ function App() {
         </ul>
       </nav>
       <div>
-        <Outlet context={[toggleState, handleClick, service, setService]} />
+        <Outlet
+          context={
+            {
+              toggleState,
+              handleClick,
+              service,
+              setService,
+            } satisfies AppContext
+          }
+        />
       </div>
     </div>
   );

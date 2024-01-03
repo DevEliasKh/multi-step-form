@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useOutletContext, Link } from "react-router-dom";
+import { AppContext, AppServiceAddOns } from "../libs/lib";
 
 function Step4() {
-  const [toggleState, handleClick, service, setService] = useOutletContext();
+  const { service } = useOutletContext<AppContext>();
   const pathname = window.location.pathname;
   const plan = service.plan;
   const add_ons = service.add_ons;
@@ -17,7 +18,8 @@ function Step4() {
 
   function costOfAdd_ons() {
     let costOfAdd_ons = 0;
-    for (const key in add_ons) {
+    let key: keyof AppServiceAddOns;
+    for (key in add_ons) {
       if (add_ons[key]) {
         const price = cost[key] * (service.time == "month" ? 1 : 10);
         costOfAdd_ons = costOfAdd_ons + price;

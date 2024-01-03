@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Toggle from "../component/toggle";
 import { useOutletContext, Link } from "react-router-dom";
+import { AppContext } from "../libs/lib";
 function Step2() {
-  const [toggleState, handleClick, service, setService] = useOutletContext();
+  const { toggleState, handleClick, service, setService } =
+    useOutletContext<AppContext>();
   const pathname = window.location.pathname;
 
   const [plan, setPlan] = useState(service.plan);

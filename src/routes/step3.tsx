@@ -1,8 +1,8 @@
 import { useOutletContext, Link } from "react-router-dom";
-
+import { AppContext } from "../libs/lib";
 function Step3() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [toggleState, handleClick, service, setService] = useOutletContext();
+  const { toggleState, service, setService } = useOutletContext<AppContext>();
   const pathname = window.location.pathname;
 
   return (
