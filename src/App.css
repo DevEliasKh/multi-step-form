@@ -72,7 +72,7 @@ label:has(> .check:checked) {
 
 @media (min-width: 375px) {
   nav {
-    background-image: url(src/assets/images/bg-sidebar-desktop.svg);
+    background-image: url(./assets/images/bg-sidebar-desktop.svg);
 
     background-repeat: no-repeat;
     background-size: cover;

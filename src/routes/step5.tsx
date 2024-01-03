@@ -3,7 +3,7 @@ function Step5() {
     <main>
       <div className="flex flex-col justify-center items-center relative -top-20 bg-white my-0 mx-auto w-11/12 rounded-md p-4">
         <img
-          src="src/assets/images/icon-thank-you.svg"
+          src="./assets/images/icon-thank-you.svg"
           alt=""
           className="w-20 py-6"
         />
