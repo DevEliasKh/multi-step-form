@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useOutletContext, Link } from "react-router-dom";
-import { AppContext, AppServiceAddOns } from "../libs/lib";
+import { AppContext, AppServiceAddOns, Keys } from "../libs/lib";
 
 function Step4() {
   const { service } = useOutletContext<AppContext>();
@@ -57,7 +57,7 @@ function Step4() {
               Change
             </Link>
             <hr className="text-cool_gray relative top-2" />
-            {Object.keys(add_ons).map((key) => {
+            {Keys(add_ons).map((key) => {
               if (add_ons[key]) {
                 return (
                   <div className="relative top-4 flex flex-col">
