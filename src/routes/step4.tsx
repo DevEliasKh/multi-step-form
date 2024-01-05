@@ -31,7 +31,7 @@ function Step4() {
 
   return (
     <main>
-      <div className="relative -top-20 bg-white my-0 mx-auto w-11/12 rounded-md p-4">
+      <div className="relative -top-20 bg-white my-0 mx-auto w-11/12 rounded-md p-4 desktop:static desktop:w-9/12 desktop:p-6">
         <section className="flex flex-col">
           <div className="text-2xl font-bold text-berkeley_blue mt-7">
             Finishing up
@@ -86,8 +86,8 @@ function Step4() {
           </section>
         </section>
       </div>
-      <footer>
-        <div className="btn w-full flex flex-row justify-between p-6">
+      <footer className="flex justify-center">
+        <div className="btn w-full flex flex-row justify-between p-6 desktop:w-9/12">
           <Link to={`/step${+pathname[5] - 1}`}>
             <button id="back-btn" className="">
               Go Back

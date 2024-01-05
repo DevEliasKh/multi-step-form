@@ -10,7 +10,7 @@ function Step3() {
       <main>
         <form
           action=""
-          className="relative -top-20 bg-white my-0 mx-auto w-11/12 rounded-md p-4"
+          className="relative -top-20 bg-white my-0 mx-auto w-11/12 rounded-md p-4 desktop:static desktop:w-9/12 desktop:p-6"
         >
           <fieldset className="flex flex-col">
             <legend className="text-2xl font-bold text-berkeley_blue mt-7">
@@ -116,8 +116,8 @@ function Step3() {
           </fieldset>
         </form>
       </main>
-      <footer>
-        <div className="btn w-full flex flex-row justify-between p-6">
+      <footer className="flex justify-center">
+        <div className="btn w-full flex flex-row justify-between p-6 desktop:w-9/12">
           <Link to={`/step${+pathname[5] - 1}`}>
             <button id="back-btn" className="">
               Go Back

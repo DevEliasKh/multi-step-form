@@ -1,13 +1,13 @@
 function Step5() {
   return (
     <main>
-      <div className="flex flex-col justify-center items-center relative -top-20 bg-white my-0 mx-auto w-11/12 rounded-md p-4">
+      <div className="flex flex-col justify-center items-center relative -top-20 bg-white my-0 mx-auto w-11/12 rounded-md p-4 desktop:static desktop:w-9/12 desktop:p-6">
         <img
           src="/src/assets/images/icon-thank-you.svg"
           alt=""
           className="w-20 py-6"
         />
-        <div className="text-center text-cool_gray">
+        <div className="w-1/2 text-center text-cool_gray">
           <p className="text-berkeley_blue font-bold text-lg pb-4">
             Thank you!
           </p>{" "}
